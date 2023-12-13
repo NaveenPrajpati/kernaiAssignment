@@ -88,6 +88,14 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+      release 
+           {
+                storeFile file('my-upload-key.keystore')
+                storePassword '123456'
+                keyAlias 'my-key-alias'
+                keyPassword '123456'
+            }
+        
     }
     buildTypes {
         debug {
@@ -100,6 +108,7 @@ android {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
+ 
     }
 }
 

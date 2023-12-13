@@ -55,6 +55,7 @@ export default function App() {
         data={fetchedData}
         onViewableItemsChanged={onViewCallBack}
         keyExtractor={item => item.id}
+
         columnWrapperStyle={{ justifyContent: 'center', gap: 5 }}
         renderItem={({ item, index }) => (
           <View style={{ width: screenW * .48 ,marginVertical:10}}>
@@ -89,7 +90,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container:{
-    padding: 6, backgroundColor: 'white' 
+    padding: 6, backgroundColor: 'white',flex:1
   },
   likeButton:{
     position: 'absolute', zIndex: 2, right: 5, top: 5
